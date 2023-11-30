@@ -26,14 +26,14 @@ public class RemoverMedico {
 		Medico medico = em.find(Medico.class, codMedico);
 
 		if (medico != null) {
-			// Verificar se há consultas associadas ao médico
+			
 			TypedQuery<Consulta> consultaQuery = em.createQuery("SELECT c FROM Consulta c WHERE c.medico = :medico",
 					Consulta.class);
 			consultaQuery.setParameter("medico", medico);
 			List<Consulta> consultas = consultaQuery.getResultList();
 
 			if (consultas.isEmpty()) {
-				// Não há consultas associadas, remover o médico
+				
 				em.remove(medico);
 				em.getTransaction().commit();
 				System.out.println("Médico removido com sucesso!");
