@@ -27,7 +27,7 @@ public class AtualizarPaciente {
 
 	        System.out.println("Digite os novos dados do paciente:");
 
-	        // Consumir o caractere de nova linha pendente
+	      
 	        sc.nextLine();
 
 	        System.out.print("Novo nome: ");
@@ -38,7 +38,7 @@ public class AtualizarPaciente {
 	        Integer novoNumConvenio = sc.nextInt();
 	        paciente.setNumConvenio(novoNumConvenio);
 
-	        // Utilize merge para atualizar o paciente
+	       
 	        em.merge(paciente);
 
 	        em.getTransaction().commit();
