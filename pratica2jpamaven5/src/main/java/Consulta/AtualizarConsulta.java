@@ -22,7 +22,7 @@ public class AtualizarConsulta {
 			System.out.println("Consulta encontrada:");
 			System.out.println("Data atual: " + consulta.getData());
 			System.out.print("Digite a nova data da consulta: ");
-			sc.nextLine(); // Consumir a quebra de linha pendente
+			sc.nextLine(); 
 			String novaData = sc.nextLine();
 			consulta.setData(novaData);
 
